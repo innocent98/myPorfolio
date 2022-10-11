@@ -1,0 +1,229 @@
+@import "../../global.scss";
+
+.portfolio {
+  // background-color: white;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto !important;
+
+  @include mobile {
+    padding-top: 15px;
+  }
+
+  h1 {
+    font-size: 30px;
+    overflow: hidden;
+  }
+
+  ul {
+    margin: 10px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+
+    @include mobile {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-left: 20px;
+    }
+  }
+
+  .productContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
+
+    .item {
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+      @include mobile{
+        padding: 0px 40px;
+      }
+
+      .title {
+        text-align: center;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      p {
+        font-size: 15px;
+        color: lightgray;
+        text-align: justify;
+      }
+      a {
+        text-align: center;
+        text-decoration: none;
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        border-radius: 4px;
+        position: relative;
+        overflow: hidden;
+        background-color: #555;
+        color: lightgray;
+        &::after {
+          content: "View project";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: -100%;
+          transition: all 1s ease;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #222;
+        }
+
+        &:hover {
+          &::after {
+            transform: translateX(100%);
+            color: white;
+          }
+        }
+      }
+
+      .img {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        @include tab{
+          transform: none !important;
+        }
+
+        .holder {
+          width: 100%;
+        }
+
+        .imgCont-laptop {
+          width: 70%;
+          height: 77%;
+          position: absolute;
+          top: 12px;
+          left: 60px;
+          overflow-y: scroll;
+
+          &::-webkit-scrollbar {
+            display: none !important;
+          }
+
+          @include mobile{
+            left: 47px;
+            top: 8px;
+          }
+          
+          .productImg{
+            width: 100%;
+          }
+        }
+
+        .imgCont-phone {
+          width: 42.5%;
+          height: 86%;
+          position: absolute;
+          top: 25px;
+          left: 112px;
+          border-radius: 20px;
+          overflow-y: scroll;
+
+          &::-webkit-scrollbar {
+            display: none !important;
+          }
+
+          @include mobile{
+            left: 89px;
+            top: 20px;
+          }
+
+          .productImg{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .moreProject{
+    a{
+      img{
+        width: 100px;
+      }
+    }
+  }
+
+  // .container {
+  //   width: 90%;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   flex-wrap: wrap;
+
+  //   .item {
+  //     background-color: $mainColor;
+  //     // width: 330px;
+  //     height: auto;
+  //     // padding: 10px;
+  //     border-radius: 20px;
+  //     // border: 1px solid rgb(240, 239, 239);
+  //     margin: 10px 20px;
+  //     display: flex;
+  //     flex-direction: column;
+  //     align-items: left;
+  //     justify-content: center;
+  //     color: white;
+  //     position: relative;
+  //     cursor: pointer;
+  //     transition: all 1s ease;
+
+  //     .holder{
+  //       width: 400px;
+  //     }
+
+  //     p {
+  //       color: $text;
+  //       padding-top: 10px;
+  //     }
+  //     h3 {
+  //       font-size: 20px;
+  //     }
+  //     .img {
+  //       width: 100%;
+  //       height: 80%;
+  //       position: absolute;
+  //       top: 0;
+  //       // border-radius: 20px;
+  //       overflow: hidden;
+  //       .imgCont {
+  //         width: 100%;
+  //         height: 100%;
+  //         // border-radius: 20px;
+  //         overflow: hidden;
+  //         transition: all 1s ease;
+  //         img {
+  //           width: 100%;
+  //           height: 100%;
+  //           object-fit: cover;
+  //           z-index: 1;
+  //         }
+  //       }
+  //     }
+  //     &:hover {
+  //       background-color: $mainColor;
+  //       .imgCont {
+  //         opacity: 0.8;
+  //         transform: scale(1.1);
+  //       }
+  //     }
+  //   }
+  // }
+}

@@ -1,0 +1,26 @@
+@import "./global.scss";
+
+.app {
+  // height: 100vh;
+  background-color: $mainColor;
+
+  // .section {
+  //   width: 100%;
+  //   height: calc(100vh - 70px);
+  //   position: relative;
+  //   top: 70px;
+  //   scroll-snap-type: y mandatory;
+  //   scroll-behavior: smooth;
+  //   &::-webkit-scrollbar {
+  //     display: none;
+  //   }
+
+  //   > * {
+  //     background-color: $mainColor;
+  //     color: white !important;
+  //     width: 100vw;
+  //     height: calc(100vh - 70px);
+  //     scroll-snap-align: start;
+  //   }
+  // }
+}

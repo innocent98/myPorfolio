@@ -1,0 +1,76 @@
+@import "../../global.scss";
+
+.uploads {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 30px 40px;
+
+  .logout {
+    width: 40%;
+    height: 80px;
+    position: absolute;
+    padding-top: 20px;
+    top: 0;
+    right: 0;
+
+    @include mobile {
+      width: 50%;
+    }
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .col-md-4 {
+      .cont {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+
+        .button {
+          margin-top: 5px;
+          width: 60%;
+          height: 40px;
+          background-color: lightgray;
+          color: white;
+          border: none;
+          border-radius: 8px;
+          font-size: 15px;
+          display: flex;
+          align-items: center !important;
+          justify-content: center;
+          text-align: center;
+        }
+        .progress {
+          width: 40%;
+          height: 40px;
+          font-size: 15px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 5px;
+        }
+      }
+      .form-control:focus {
+        outline: none !important;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .submit-button {
+      width: 80%;
+      height: 50px;
+      background-color: crimson;
+      color: white;
+      border: none;
+      border-radius: 20px;
+    }
+  }
+}

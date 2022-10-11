@@ -1,0 +1,186 @@
+@import "../../global.scss";
+
+.intro {
+  // background-color: white;
+  color: white;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+
+  @include tab {
+    height: auto !important;
+    margin-top: 100px;
+    flex-direction: column-reverse;
+    padding: 10px 0;
+  }
+
+  .left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 40px;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+
+    @include tab {
+      padding-top: 15px;
+      flex: 0;
+    }
+    @include mobile {
+      padding-top: 15px;
+      flex: 0;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      @include mobile {
+        margin-top: 30px;
+      }
+      h3 {
+        font-size: 30px;
+        overflow: hidden;
+
+        @include tab {
+          font-size: 20px;
+        }
+        @include mobile {
+          font-size: 18px;
+        }
+        span {
+          color: $text;
+        }
+        .ityped-cursor {
+          animation: blink 1s infinite;
+        }
+        @keyframes blink {
+          50% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0;
+          }
+        }
+      }
+      h2 {
+        font-weight: 300;
+        font-size: 30px;
+        overflow: hidden;
+
+        @include tab {
+          font-size: 25px;
+        }
+        @include mobile {
+          font-size: 22px;
+        }
+        span {
+          font-size: 1.2em;
+          font-weight: 500;
+          margin: 10px 0;
+          color: $text;
+          overflow: hidden;
+
+          @include tab {
+            font-size: 1em;
+          }
+          @include mobile {
+            font-size: 1em;
+          }
+        }
+      }
+
+      .cv {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        color: white;
+        @include tab {
+          margin-top: 10px;
+        }
+        @include mobile {
+          margin-top: 30px;
+        }
+        img {
+          width: 40px;
+        }
+        span {
+          font-weight: 700;
+          font-size: 25px;
+          @include tab {
+            font-size: 25px;
+          }
+          @include mobile {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+
+    .keydown {
+      position: absolute;
+      bottom: 50px;
+      color: white;
+      animation: arrowBlink 2s infinite;
+
+      @include tab {
+        position: relative;
+        margin-top: 100px;
+      }
+      @include mobile {
+        position: relative;
+        margin-top: 100px;
+      }
+    }
+    @keyframes arrowBlink {
+      100% {
+        opacity: 0;
+      }
+    }
+  }
+
+  .right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    @include tab {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .imgCont {
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include tab {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+      }
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        @include tab {
+          height: 100%;
+          width: 100%;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

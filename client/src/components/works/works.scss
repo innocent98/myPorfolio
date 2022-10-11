@@ -1,0 +1,157 @@
+@import "../../global.scss";
+
+.works {
+  // background-color: crimson;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .arrow {
+    position: absolute;
+    height: 50px;
+
+    &.left {
+      left: 100px;
+      color: white;
+      cursor: pointer;
+    }
+    &.right {
+      right: 100px;
+      color: white;
+      cursor: pointer;
+    }
+  }
+
+  .slider {
+    display: flex;
+    height: 350px;
+    position: absolute;
+    left: 0;
+    transition: all 1s ease-out;
+    @include tab {
+      margin-top: 100px;
+      flex-direction: column;
+      position: relative;
+      height: auto;
+    }
+    @include mobile {
+      margin-top: 100px;
+      flex-direction: column;
+      position: relative;
+      height: auto;
+    }
+
+    .container {
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 110px;
+
+      @include tab {
+        width: 70vw;
+        margin-bottom: 10px;
+        margin-left: 10px;
+      }
+      @include mobile {
+        width: 85vw;
+        margin-bottom: 10px;
+      }
+
+      .item {
+        width: 700px;
+        height: 100%;
+        background-color: white;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .left {
+          flex: 4;
+          height: 80%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .leftContainer {
+            width: 90%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .imgContainer {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              background-color: rgb(245, 179, 155);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            h2 {
+              font-size: 30px;
+              font-weight: 700;
+              overflow: hidden;
+              color: black;
+
+              @include tab {
+                font-size: 15px;
+                padding-top: 5px;
+              }
+              @include mobile {
+                font-size: 15px;
+                padding-top: 5px;
+              }
+            }
+            p {
+              font-size: 13px;
+              font-size: 10px;
+            }
+            span {
+              font-size: 12px;
+              font-weight: 600;
+              text-decoration: underline;
+              cursor: pointer;
+            }
+          }
+        }
+        .right {
+          flex: 8;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .arrow {
+    @include tab {
+      display: none;
+    }
+    @include mobile {
+      display: none;
+    }
+  }
+
+  .stack {
+    color: white;
+    z-index: 1;
+    position: absolute;
+    top: 30px;
+    font-size: 30px;
+    font-weight: 600;
+  }
+}

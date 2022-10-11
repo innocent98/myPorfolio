@@ -1,0 +1,55 @@
+@import "../../global.scss";
+
+.side {
+  width: 300px;
+  height: 100vh;
+  background-color: $mainColor;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: -300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in;
+
+  &.active {
+    right: 0;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 30px;
+    font-weight: 300;
+    color: white;
+    width: 60%;
+    @include tab {
+      font-size: 20px;
+    }
+
+    li {
+      margin-bottom: 25px;
+      transition: all 1s ease;
+      &:hover {
+        transform: scale(1.1);
+        font-weight: 500;
+      }
+      a {
+        color: inherit;
+        font-size: inherit;
+        text-decoration: none;
+        font-weight: inherit;
+      }
+    }
+    .itemContainer {
+      font-size: 15px;
+      &:hover {
+        transform: scale(1);
+        font-weight: normal;
+      }
+    }
+  }
+}

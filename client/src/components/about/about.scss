@@ -1,0 +1,134 @@
+@import "../../global.scss";
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto !important;
+  color: white;
+
+  .left {
+    flex: 1;
+    padding: 40px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include tab {
+      width: 100%;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+
+    h2 {
+      height: auto;
+      overflow: hidden;
+      text-decoration: underline;
+      font-size: 25px;
+    }
+
+    p {
+      color: lightgray;
+      text-align: justify;
+      opacity: 0.1;
+      transition: all 7s ease;
+    }
+
+    .fade-in {
+      opacity: 1;
+    }
+  }
+
+  .right {
+    flex: 1;
+    color: black;
+    padding: 40px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      color: white;
+      height: auto;
+      overflow: hidden;
+      text-decoration: underline;
+      font-size: 25px;
+    }
+
+    .wrapper {
+      display: flex;
+      gap: 10px;
+      overflow: hidden;
+
+      @include tab {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &.scrolled {
+          animation: jump linear 0.3s !important;
+        }
+      }
+
+      @include mobile {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &.scrolled {
+          animation: jump linear 0.3s !important;
+        }
+      }
+
+      .card {
+        height: 300px;
+        width: 50%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include tab {
+          width: 100%;
+          transform: none !important;
+        }
+
+        @include mobile {
+          width: 100%;
+          transform: none !important;
+        }
+
+        img {
+          width: 80px;
+        }
+
+        h3 {
+          overflow: hidden;
+          color: $mainColor;
+          font-weight: 600;
+          font-size: 20px;
+        }
+
+        p {
+          overflow: hidden;
+          font-size: 16px;
+          color: gray;
+        }
+      }
+    }
+  }
+}
+
+@keyframes jump {
+  from {
+    transform: translateX(200px);
+    opacity: 0.5;
+  }
+}
