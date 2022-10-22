@@ -17,7 +17,7 @@ export default function Sidebar({ menuOpen, setMenuOpen }) {
         </li>
         <li>
           <a href="#works" onClick={() => setMenuOpen(!menuOpen)}>
-          Technologies
+            Stacks
           </a>
         </li>
         <li>

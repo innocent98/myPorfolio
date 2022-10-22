@@ -55,7 +55,7 @@
       "last 1 safari version"
     ]
   },
-  "description": "PUBLISHER\r <!-- \r *can register and login as PUBLISHER\r *publisher can also register to become a user\r *can upload his book in pdf format(including cover page and other designs available in jpg)\r *can delete or request for deletion of his book\r *will provide short description of the book while uploading\r *required publisher cover picture\r *will get notification when a copy of book is purchased\r  -->",
+  "description": "",
   "main": "index.js",
   "author": "InnoTech",
   "license": "ISC",

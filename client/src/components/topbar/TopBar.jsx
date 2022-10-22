@@ -7,15 +7,24 @@ export default function TopBar({ menuOpen, setMenuOpen }) {
       <div className="wrapper">
         <div className="navLeft">
           <a href="#intro">
-            <img src="/assets/img/InnoTech.png" alt="" className="logo img-fluid" />
+            <img
+              src="/assets/img/InnoTech.png"
+              alt=""
+              className="logo img-fluid"
+            />
           </a>
           <div className="itemContainer">
             <Person />
-            <span><a href="tel:+2349066128757">+2349066128757</a>, <a href="tel:+22966561073">+22966561073</a></span>
+            <span>
+              <a href="tel:+2349066128757">+2349066128757</a>,{" "}
+              <a href="tel:+22966561073">+22966561073</a>
+            </span>
           </div>
           <div className="itemContainer">
             <Mail />
-            <span><a href="mailto:adevictor98@gmail.com">adevictor98@gmail.com</a></span>
+            <span>
+              <a href="mailto:adevictor98@gmail.com">adevictor98@gmail.com</a>
+            </span>
           </div>
         </div>
         <div className="navRight">
@@ -28,7 +37,7 @@ export default function TopBar({ menuOpen, setMenuOpen }) {
                 <a href="#portfolio">Portfolio</a>
               </li>
               <li>
-                <a href="#works">Technologies</a>
+                <a href="#works">Stacks</a>
               </li>
               <li>
                 <a href="#testimonial">Testimonials</a>
@@ -38,8 +47,8 @@ export default function TopBar({ menuOpen, setMenuOpen }) {
               </li>
             </ul>
           </div>
-          
-          <div className="hamburger" onClick={()=>setMenuOpen(!menuOpen)}>
+
+          <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
             <span className="line1"></span>
             <span className="line2"></span>
             <span className="line3"></span>

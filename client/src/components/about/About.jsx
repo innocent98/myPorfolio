@@ -10,7 +10,7 @@ const About = ({ isScrolled }) => {
           I am a Computer Scientist and a junior FULL-STACK software developer with 3
           years of IT experience and 2 years experience as a junior FULL-STACK
           developer. My Technical skills & Tools are Nodejs, Expressjs, MongoDb,
-          MySQL, Reactjs, Redux, Sass, WordPress, NPM, Git, Trello, Slack.
+          MySQL, Reactjs, React native, Redux, Sass, WordPress, NPM, Git, Trello, Slack.
           Developing Web Application is my passion and my main career goal is to
           work with a tech organization that focuses on building Web
           Application. I am a skilled Web Developer who is passionate about

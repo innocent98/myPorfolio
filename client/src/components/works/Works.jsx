@@ -14,7 +14,7 @@ export default function Works() {
     {
       id: 1,
       img: "https://reactjs.org/logo-og.png",
-      title: "ReactJs",
+      title: "React",
       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam nostrum temporibus autem.",
       icon: <PhoneIphone />,
     },
@@ -84,7 +84,7 @@ export default function Works() {
 
   return (
     <div className="works" id="works">
-      <div className="stack">Technologies</div>
+      <div className="stack">Stacks</div>
       <div
         className="slider"
         style={{ transform: `translateX(-${currentSlide * 90}vw)` }}

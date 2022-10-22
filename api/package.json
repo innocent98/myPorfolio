@@ -24,14 +24,5 @@
     "nodemon": "^2.0.20",
     "save": "^2.4.0",
     "uuid": "^8.3.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/innocent98/myPortfolio.git"
-  },
-  "bugs": {
-    "url": "https://github.com/innocent98/myPortfolio/issues"
-  },
-  "homepage": "https://github.com/innocent98/myPortfolio#readme",
-  "description": ""
+  }
 }
