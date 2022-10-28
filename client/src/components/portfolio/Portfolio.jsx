@@ -20,10 +20,10 @@ export default function Portfolio({ isScrolled }) {
       id: "mobile app",
       title: "Mobile App",
     },
-    // {
-    //   id: "rest api",
-    //   title: "Rest APIs",
-    // },
+    {
+      id: "rest api",
+      title: "Rest APIs",
+    },
   ];
 
   useEffect(() => {
@@ -49,13 +49,13 @@ export default function Portfolio({ isScrolled }) {
         };
         fetchMobile();
         break;
-      // case "rest api":
-      //   const fetchApi = async () => {
-      //     const res = await axios.get("/api/api");
-      //     setData(res.data);
-      //   };
-      //   fetchApi();
-      //   break;
+      case "rest api":
+        const fetchApi = async () => {
+          const res = await axios.get("/api/api");
+          setData(res.data);
+        };
+        fetchApi();
+        break;
       default:
         const fetchDefault = async () => {
           const res = await axios.get("/featured/featured");
@@ -82,7 +82,10 @@ export default function Portfolio({ isScrolled }) {
       <div className="productContainer">
         {data.map((d) => (
           <div className="item" key={d.id}>
-            <div className="img" style={{transform: `translateY(${isScrolled * 0.0005}px`}}>
+            <div
+              className="img"
+              style={{ transform: `translateY(${isScrolled * 0.0005}px)` }}
+            >
               <img
                 src={d.phone ? d.phone : d.laptop}
                 className="holder"
@@ -93,7 +96,7 @@ export default function Portfolio({ isScrolled }) {
               </div>
             </div>
             <div className="title">{d.title && d.title}</div>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae dignissimos quo ullam, deserunt itaque eos velit officiis doloribus esse exercitationem dolor asperiores vero laboriosam tempore nihil officia, reprehenderit laudantium eveniet.</p>
+            <p>{d.description}</p>
             <a href={d.link} target="_blank" rel="noreferrer">
               Learn more
             </a>

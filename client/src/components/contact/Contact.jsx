@@ -34,7 +34,7 @@ export default function Contact({isScrolled}) {
           alt=""
         />
       </div>
-      <div className="right" style={{transform: `translateX(calc(650vh - ${isScrolled}px))`}}>
+      <div className="right">
         <h2>Get In Touch</h2>
         <form onSubmit={handleSubmit}  ref={formRef}>
           <input type="text" name="name" placeholder="Name" required />
