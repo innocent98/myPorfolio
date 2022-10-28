@@ -1,8 +1,9 @@
-import axios from "axios";
+// import axios from "axios";
 import { useState, useRef, useContext } from "react";
 import { Context } from "../../context/Context";
 import { CircularProgress } from "@material-ui/core";
 import "./login.scss";
+import { axiosInstance } from "../../config";
 
 export default function Login() {
   const userRef = useRef();
@@ -15,7 +16,7 @@ export default function Login() {
     setError(false);
     dispatch({ type: "LOGIN_START" });
     try {
-      const res = await axios.post("/auth/login", {
+      const res = await axiosInstance.post("/auth/login", {
         email: userRef.current.value,
         password: passwordRef.current.value,
       });
@@ -25,6 +26,7 @@ export default function Login() {
       setError(true);
     }
   };
+  
   return (
     <div className="login">
       <form className="row g-3" onSubmit={handleSubmit}>

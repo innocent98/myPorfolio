@@ -1,9 +1,10 @@
-import axios from "axios";
+// import axios from "axios";
 import { useState } from "react";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import "./submitTestimony.scss";
 import { CheckCircle } from "@material-ui/icons";
 import storage from "../../firebase";
+import { axiosInstance } from "../../config";
 
 export default function SubmitTestimony() {
   const [firstName, setFirstName] = useState("");
@@ -63,7 +64,7 @@ export default function SubmitTestimony() {
     e.preventDefault();
     setProcessing(true)
     try {
-      const res = await axios.post("/testimonial/submit-testimony", newSubmit);
+      const res = await axiosInstance.post("/testimonial/submit-testimony", newSubmit);
       setProcessing(false)
       setSuccess(true);
       window.location.reload("/testimony" + res.data.id);

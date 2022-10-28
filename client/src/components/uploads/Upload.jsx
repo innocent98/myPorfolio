@@ -1,10 +1,11 @@
 import { useContext, useEffect, useState } from "react";
 import "./uploads.scss";
-import axios from "axios";
+// import axios from "axios";
 import Logout from "../logout/Logout";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import storage from "../../firebase";
 import { Context } from "../../context/Context";
+import { axiosInstance } from "../../config";
 
 export default function Upload() {
   const [
@@ -87,25 +88,25 @@ export default function Upload() {
     try {
       switch (category) {
         case "api":
-          const res = await axios.post("/api/upload", { ...inputs });
+          const res = await axiosInstance.post("/api/upload", { ...inputs });
           setSuccess(true);
           setCategory(res.data);
           window.location.reload("/uploads" + res.data.id);
           break;
         case "mobile":
-          const resm = await axios.post("/mobile/upload", { ...inputs });
+          const resm = await axiosInstance.post("/mobile/upload", { ...inputs });
           setSuccess(true);
           setCategory(resm.data);
           window.location.reload("/uploads" + resm.data.id);
           break;
         case "web":
-          const resw = await axios.post("/web/upload", { ...inputs });
+          const resw = await axiosInstance.post("/web/upload", { ...inputs });
           setSuccess(true);
           setCategory(resw.data);
           window.location.reload("/uploads" + resw.data.id);
           break;
         default:
-          const resf = await axios.post("/featured/upload", { ...inputs });
+          const resf = await axiosInstance.post("/featured/upload", { ...inputs });
           setSuccess(true);
           setCategory(resf.data);
           window.location.reload("/uploads" + resf.data.id);
@@ -115,6 +116,7 @@ export default function Upload() {
       console.log(err);
     }
   };
+
   return (
     <div className="uploads">
       <div className="logout">

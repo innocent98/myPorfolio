@@ -1,5 +1,6 @@
-import axios from "axios";
+// import axios from "axios";
 import { useState, useEffect } from "react";
+import { axiosInstance } from "../../config";
 import PortfolioList from "../portfolioList/PortfolioList";
 import "./portfolio.scss";
 // import { featured, web, mobile, api } from "../../dummyData";
@@ -30,41 +31,42 @@ export default function Portfolio({ isScrolled }) {
     switch (selected) {
       case "featured":
         const fetchFeatured = async () => {
-          const res = await axios.get("/featured/featured");
+          const res = await axiosInstance.get("/featured/featured");
           setData(res.data);
         };
         fetchFeatured();
         break;
       case "web app":
         const fetchWeb = async () => {
-          const res = await axios.get("/web/web");
+          const res = await axiosInstance.get("/web/web");
           setData(res.data);
         };
         fetchWeb();
         break;
       case "mobile app":
         const fetchMobile = async () => {
-          const res = await axios.get("/mobile/mobile");
+          const res = await axiosInstance.get("/mobile/mobile");
           setData(res.data);
         };
         fetchMobile();
         break;
       case "rest api":
         const fetchApi = async () => {
-          const res = await axios.get("/api/api");
+          const res = await axiosInstance.get("/api/api");
           setData(res.data);
         };
         fetchApi();
         break;
       default:
         const fetchDefault = async () => {
-          const res = await axios.get("/featured/featured");
+          const res = await axiosInstance.get("/featured/featured");
           setData(res.data);
         };
         fetchDefault();
         break;
     }
   }, [selected]);
+
   return (
     <div className="portfolio" id="portfolio">
       <h1>Portfolio</h1>
