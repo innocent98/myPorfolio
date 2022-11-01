@@ -1,0 +1,130 @@
+@import "../../global.scss";
+
+.login {
+  height: 100vh;
+  display: flex;
+  position: relative;
+
+  .left {
+    flex: 1;
+    background-color: $generalColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    h1 {
+      width: 70%;
+      font-family: "Open-sans", sans-serif;
+      font-weight: 900;
+      font-size: 55px;
+      text-align: left;
+    }
+  }
+
+  .center {
+    background-color: $generalColor;
+    padding: 10px;
+    border-radius: 50%;
+    border: 10px solid white;
+    position: absolute;
+    left: 45%;
+    top: 40%;
+    z-index: 2;
+    height: 120px;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .row {
+      width: 100%;
+      .col-md-4 {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        .verified {
+          padding: 5px;
+          border: 4px solid white;
+          border-radius: 50%;
+          color: white;
+          background-color: lightseagreen;
+          font-size: 15px;
+          position: absolute;
+          top: 10px;
+          right: 40%;
+          cursor: pointer;
+        }
+        .img {
+          height: 120px;
+          width: 120px;
+          border: 1px solid lightgrey;
+          border-radius: 50%;
+          padding: 10px;
+          img {
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+          }
+        }
+        input {
+          width: 60%;
+          padding: 10px;
+          padding-left: 40px;
+          border: 1px solid lightgrey;
+          border-radius: 8px;
+          color: black;
+          &:focus {
+            outline: none;
+          }
+          &::placeholder {
+            color: lightgrey;
+          }
+        }
+        .account,
+        .lock {
+          position: absolute;
+          left: 22%;
+        }
+        .submit-button {
+          background-color: $button;
+          color: white;
+          width: 60%;
+          margin-bottom: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          // .spin {
+          //   animation: spin infinite 1s linear;
+          //   height: 20px;
+          //   width: 20px;
+          //   border-radius: 50%;
+          //   border: 2px solid white;
+          // }
+        }
+      }
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

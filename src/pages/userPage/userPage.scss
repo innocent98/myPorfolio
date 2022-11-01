@@ -1,0 +1,318 @@
+@import "../../global.scss";
+
+.userPage {
+  margin-top: 60px;
+  padding: 10px 100px;
+  padding-bottom: 100px;
+  @include l{
+    padding: 10px 20px;
+  }
+  @include tab{
+    padding: 10px;
+    overflow: hidden;
+  }
+  .picture {
+    .coverPicture {
+      position: relative;
+      width: 100%;
+      height: 320px;
+      @include tab{
+        height: 250px;
+      }
+      @include mobile{
+        height: 200px;
+      }
+      &:hover {
+        .cImg {
+          opacity: 0.8;
+        }
+        .editCover {
+          position: absolute;
+          left: 10px;
+          top: 10px;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          border: 1px solid white;
+          padding: 8px;
+          border-radius: 3px;
+          font-family: "Roboto", sans-serif;
+          font-weight: 500;
+          font-size: 14px;
+          text-transform: capitalize;
+          cursor: pointer;
+          .camera {
+            color: white;
+          }
+          .editTxt {
+            display: flex;
+          }
+        }
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.5s ease;
+      }
+
+      .editCover {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        padding: 8px;
+        .camera {
+          color: white;
+        }
+      }
+      .editTxt {
+        display: none;
+      }
+
+      .profilePicture {
+        position: absolute;
+        height: 120px;
+        visibility: 120px;
+        left: 45%;
+        bottom: -50px;
+        @include tab{
+          height: 110px;
+          left: 40%;
+          bottom: -30px;
+        }
+        @include mobile{
+          height: 100px;
+          bottom: -20px;
+          left: 35%;
+        }
+        img {
+          height: 100%;
+          width: 100%;
+          border-radius: 50%;
+        }
+      }
+      .pictureLabel {
+        position: absolute;
+        left: 53%;
+        bottom: -40px;
+        z-index: 2;
+        height: 30px;
+        width: 30px;
+        background-color: $button;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include tab{
+          bottom: -30px;
+          left: 52%;
+        }
+        @include mobile{
+          bottom: -20px;
+          left: 52%;
+        }
+        span {
+          color: white;
+        }
+      }
+    }
+
+    .timeline {
+      @include tab{
+        margin-top: 15px;
+      }
+      @include mobile{
+        margin-top: 25px;
+      }
+      .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .left,
+        .right {
+          margin-top: 15px;
+          .link {
+            border: 1px solid lightgray;
+            padding: 8px 25px;
+            border-radius: 8px;
+            margin: 2px;
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            font-size: 15px;
+            background-color: rgb(252, 252, 252) !important;
+            @include mobile{
+              padding: 8px 15px;
+            }
+          }
+        }
+      }
+
+      .down {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 15px;
+        .left,
+        .mid {
+          text-transform: uppercase;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          h1 {
+            font-family: "Roboto", sans-serif;
+            font-size: 25px;
+            font-weight: 800;
+            @include tab{
+              font-size: 22px;
+              font-weight: 600;
+            }
+            @include mobile{
+              font-weight: 600;
+              font-size: 16px;
+            }
+          }
+          p {
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            color: gray;
+            font-size: 14px;
+            margin-top: -10px;
+            @include mobile{
+              font-size: 12px;
+            }
+          }
+        }
+        .right {
+          position: relative;
+          .link {
+            //   border: 1px solid lightgray;
+            border-radius: 8px;
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            font-size: 15px;
+            //   background-color: rgb(252, 252, 252);
+            width: 200px;
+          }
+          span {
+            position: absolute;
+          }
+        }
+      }
+    }
+
+    .search {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 55px;
+      gap: 30px;
+      .left {
+        height: 100%;
+        flex: 1;
+        background-color: white;
+        border-radius: 8px;
+        padding: 8px 20px;
+        width: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        @include tab{
+          display: none;
+        }
+        i {
+          color: gray;
+        }
+      }
+      .right {
+        height: 100%;
+        flex: 3;
+        background-color: white;
+        border-radius: 8px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 20px;
+        .posts {
+          font-family: "Roboto", sans-serif;
+          font-weight: 500;
+          font-size: 16px;
+        }
+        .but {
+          .link {
+            border: 1px solid lightgray;
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            padding: 10px;
+            margin: 0px 5px;
+            color: rgb(41, 39, 39);
+            border-radius: 8px;
+          }
+        }
+      }
+    }
+  }
+
+  .pageContent {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 20px;
+    @include tab{
+      flex-direction: column;
+    }
+    .left {
+      flex: 1.5;
+      height: auto;
+      @include mobile{
+        // display: none;
+      }
+      .community {
+        border-radius: 8px;
+        background-color: white;
+        padding: 20px 15px;
+        margin-bottom: 20px;
+        .title {
+          font-family: "Roboto", sans-serif;
+          font-weight: 400;
+          font-size: 17px;
+          margin-bottom: 5px;
+          color: gray;
+        }
+        .row {
+          display: flex;
+          flex-direction: column;
+          .col {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            span {
+              font-size: 16px;
+              margin-bottom: 5px;
+            }
+            .txt {
+              font-family: "Roboto", sans-serif;
+              font-weight: 400;
+              font-size: 14px;
+              color: gray;
+            }
+          }
+        }
+      }
+    }
+    .right {
+      flex: 4.1;
+      background-color: $miniBackground;
+      height: auto;
+      border-radius: 8px;
+    }
+  }
+}

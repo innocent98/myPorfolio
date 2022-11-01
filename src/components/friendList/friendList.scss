@@ -1,0 +1,154 @@
+@import "../../global.scss";
+
+.fiendList {
+    position: relative;
+  .wrapper {
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 220px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    position: relative;
+    .img {
+      width: 110px;
+      height: 110px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.5s ease !important;
+      border-radius: 50%;
+      transition: all 1s ease-out;
+      img {
+        width: 93%;
+        height: 93%;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+    .icon {
+      position: absolute;
+      height: 30px;
+      width: 30px;
+      color: white;
+      background-color: $generalColor;
+      border: 2px solid white;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      right: 80px;
+      opacity: 0;
+      transition: all 0.5s ease-out;
+    }
+
+    .link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+      .name {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-size: 15px;
+      }
+      .from {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        color: lightgray;
+        font-size: 13px;
+      }
+    }
+
+    &:hover {
+      box-shadow: 0px 0px 31px -19px rgba(0, 0, 0, 0.49);
+      -webkit-box-shadow: 0px 0px 31px -19px rgba(0, 0, 0, 0.49);
+      -moz-box-shadow: 0px 0px 31px -19px rgba(0, 0, 0, 0.49);
+
+      .img {
+        border: 1px solid lightgray;
+        border-radius: 50%;
+        // padding: 5px;
+      }
+      .icon {
+        opacity: 1;
+        display: flex;
+      }
+    }
+  }
+
+  .widget {
+    position: absolute;
+    top: 100px;
+    height: 200px;
+    border-radius: 8px;
+    background-color: white;
+    padding: 10px;
+    box-shadow: -4px 11px 46px -33px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -4px 11px 46px -33px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -4px 11px 46px -33px rgba(0, 0, 0, 0.75);
+    margin-top: 20px;
+    z-index: 2;
+
+    .coverImage {
+      height: 100px;
+      // width: 100%;
+      position: relative;
+      img {
+        height: 100%;
+      }
+      .img {
+        position: absolute;
+        border-radius: 50%;
+        border: 5px solid white;
+        height: 60%;
+        bottom: -30px;
+        right: 10px;
+      }
+    }
+    .title {
+      margin: 5px;
+      font-size: 15px;
+      font-family: "Roboto", sans-serif;
+      font-weight: 500;
+    }
+    p {
+      color: gray;
+      margin-top: -5px;
+      font-family: "Roboto", sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 5px;
+      text-align: left;
+    }
+
+    .spin {
+      height: 30px;
+      width: 30px;
+    //   border-radius: 50%;
+    //   border: 3px solid grey;
+      position: absolute;
+      z-index: 9;
+      left: 40%;
+      top: -30%;
+    //   animation: spin infinite 1s linear;
+    //   transition: all 1s ease;
+    }
+    &.loading {
+      .coverImage,
+      p,
+      .title {
+        opacity: 0.4;
+      }
+    }
+  }
+}

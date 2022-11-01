@@ -1,0 +1,91 @@
+@import "../../global.scss";
+
+.product {
+  display: flex;
+  .productCard {
+    width: 280px;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid lightgray;
+    position: relative;
+    .brandImg {
+      width: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 100%;
+      }
+    }
+    .brandDetails {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: center;
+      .productName {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+      }
+      .productDesc {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        color: gray;
+      }
+      .brandLike {
+        margin-top: 20px;
+        width: 200px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: lightgray;
+        border-radius: 8px;
+        border: 1px solid lightgray;
+        box-shadow: 0px 0px 17px -8px rgba(0, 0, 0, 0.42);
+        -webkit-box-shadow: 0px 0px 17px -8px rgba(0, 0, 0, 0.42);
+        -moz-box-shadow: 0px 0px 17px -8px rgba(0, 0, 0, 0.42);
+        span {
+          cursor: pointer;
+          padding: 5px;
+          width: 100px;
+          color: rgba(27, 27, 27, 0.918);
+          font-family: "Roboto", sans-serif;
+          font-weight: 600;
+          font-size: 12px;
+          text-align: center;
+        }
+        i {
+          &.fav {
+            color: #fc294f;
+          }
+        }
+      }
+    }
+
+    .icon {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      color: lightgray;
+      border-radius: 4px;
+      height: 25px;
+      width: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.5s ease;
+      &:hover {
+        background-color: lightgray;
+        color: rgba(27, 27, 27, 0.918);
+      }
+    }
+  }
+}

@@ -1,0 +1,165 @@
+@import "../../global.scss";
+
+.userVideoComponent {
+  position: relative;
+  .userVideo {
+    display: flex;
+    height: calc(100vh - 60px);
+    @include tab {
+      flex-direction: column;
+      overflow-y: scroll;
+    }
+    .left {
+      flex: 1.2;
+      background-color: $miniBackground;
+      border-right: 1px solid lightgray;
+      @include tab {
+        display: none;
+      }
+
+      .uProfile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 20px;
+        .img {
+          height: 100px;
+          width: 100px;
+          border: 1px solid lightgray;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            height: 85%;
+            width: 85%;
+            object-fit: cover;
+            border-radius: 50%;
+          }
+        }
+
+        .uName {
+          font-weight: 600;
+          font-family: "Roboto", sans-serif;
+          font-size: 18px;
+        }
+        .location {
+          font-family: "Roboto", sans-serif;
+          font-weight: 400;
+          font-size: 14px;
+          color: gray;
+        }
+        .followers {
+          display: flex;
+          align-items: center;
+          gap: 30px;
+          margin-top: 20px;
+          .following {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            span {
+              font-family: "Roboto", sans-serif;
+              font-weight: 400;
+              font-size: 14px;
+              color: gray;
+            }
+            .foll {
+              font-weight: 600;
+              color: rgb(27, 27, 27);
+            }
+          }
+        }
+      }
+
+      .utilities {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 20px;
+        .row {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          .col {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 25px;
+            cursor: pointer;
+            span {
+              font-size: 14px;
+              font-weight: 500;
+              color: gray;
+            }
+          }
+        }
+      }
+
+      &.vProfile {
+        @include tab {
+          display: block;
+        }
+      }
+    }
+
+    .right {
+      flex: 4.5;
+      background-color: white;
+      padding: 0;
+      overflow-y: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .top {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        overflow-x: scroll;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        margin-bottom: 40px;
+
+        .highlights {
+          flex: 9;
+          iframe {
+            @include tab{
+              height: 400px;
+            }
+            @include mobile {
+              height: 300px;
+            }
+          }
+        }
+      }
+
+      h3 {
+        padding: 15px;
+        padding-bottom: 5px;
+        line-height: 0.1;
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        color: $text;
+        display: none;
+        @include tab {
+          display: flex;
+          cursor: pointer;
+        }
+      }
+
+      .statue {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0.1);
+  }
+}

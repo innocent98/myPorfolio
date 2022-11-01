@@ -1,0 +1,139 @@
+@import "../../global.scss";
+
+.commerce {
+  height: calc(100vh - 60px);
+  padding: 20px 80px;
+  position: relative;
+  .main {
+    .top {
+      display: flex;
+      justify-content: space-between;
+      @include tab{
+        flex-direction: column;
+        justify-content: center;
+      }
+      .left {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        .storeLogo {
+          width: 90px;
+          img {
+            width: 100%;
+            border-radius: 8px;
+          }
+        }
+        .storeTitle {
+          h3 {
+            font-family: "Roboto", sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            color: rgb(27, 27, 27);
+            margin-bottom: -5px;
+          }
+          span {
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            color: gray;
+            font-size: 15px;
+          }
+        }
+      }
+
+      .mid {
+        flex: 1;
+        font-family: "Roboto", sans-serif;
+        .overview {
+          font-family: "Roboto", sans-serif;
+          font-weight: 600;
+          font-size: 16px;
+          color: rgb(27, 27, 27);
+          @include tab{
+            margin-top: 10px;
+          }
+        }
+        .brandOverview {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          .bo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            h3 {
+              font-weight: 600;
+              font-size: 25px;
+              margin-bottom: -5px;
+            }
+            span {
+              font-weight: 400;
+              color: gray;
+              font-size: 12px;
+            }
+          }
+          hr {
+            transform: rotateY(90deg);
+            color: black;
+          }
+        }
+      }
+
+      .right {
+        flex: 1;
+        font-family: "Roboto", sans-serif;
+        @include tab{
+          margin-top: 10px;
+        }
+        .about {
+          font-weight: 600;
+          font-size: 18px;
+        }
+        .content {
+          font-weight: 400;
+          font-size: 16px;
+          color: gray;
+        }
+      }
+    }
+
+    .productSection {
+      margin-top: 30px;
+      .tabs {
+        display: flex;
+        gap: 10px;
+        .tab {
+          font-family: "Roboto", sans-serif;
+          font-weight: 500;
+          font-size: 15px;
+          color: gray;
+          cursor: pointer;
+          padding: 8px;
+          &.active {
+            border-bottom: 1px solid $generalColor;
+            color: rgba(27, 27, 27, 0.918);
+          }
+        }
+      }
+
+      .prod {
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .prodTab {
+          animation: float 0.5s linear;
+        }
+      }
+    }
+  }
+
+}
+
+@keyframes float {
+  0% {
+    transform: translateX(50px);
+    opacity: 0.8;
+  }
+}

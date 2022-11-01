@@ -1,0 +1,48 @@
+@import "../../global.scss";
+
+.userFriend {
+  display: flex;
+  flex-direction: column;
+
+  .details {
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    margin-bottom: 15px;
+
+    .check-box {
+      // appearance: none;
+      background-color: #fff;
+      margin: 0;
+      font: inherit;
+      color: currentColor;
+      width: 1.15em;
+      height: 1.15em;
+      border: 0.15em solid currentColor;
+      border-radius: 50%;
+      transform: translateY(-0.075em);
+      cursor: pointer;
+    }
+
+    .fa-bell,
+    .storyIcon {
+      background-color: white;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+
+    .tag {
+      font-family: "Roboto", sans-serif;
+      font-weight: 500;
+      font-size: 15px;
+      color: gray;
+    }
+  }
+}

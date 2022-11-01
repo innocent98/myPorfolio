@@ -1,0 +1,21 @@
+@import "../../global.scss";
+
+.storyHighlight {
+  display: flex;
+  .img {
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    cursor: pointer;
+    img {
+      height: 85%;
+      width: 85%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+$generalColor: #3498DB;
+$text: #202020;
+$button: #5082C3;
+$miniBackground: #F4F6F7;
+$online: #2ECC71;
+$link: #5392E0;
+$alt: #01011b;
+
+
+$mobWidth: 480px;
+$tabWidth: 768px;
+$lWidth: 1024px;
+$xlWidth: 1200px;
+
+@mixin xl {
+  @media screen and (max-width: #{$xlWidth}) {
+    @content;
+  }
+}
+@mixin l {
+  @media screen and (max-width: #{$lWidth}) {
+    @content;
+  }
+}
+@mixin tab {
+  @media screen and (max-width: #{$tabWidth}) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media screen and (max-width: #{$mobWidth}) {
+    @content;
+  }
+}

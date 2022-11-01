@@ -1,0 +1,16 @@
+@import "./global.scss";
+
+.app {
+  background-color: $miniBackground;
+  position: relative;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  height: 100vh;
+
+  .section {
+    height: calc(100vh - 60px);
+    margin-top: 60px;
+  }
+}

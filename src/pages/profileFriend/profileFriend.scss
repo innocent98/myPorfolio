@@ -1,0 +1,267 @@
+@import "../../global.scss";
+
+.profileFriend {
+  margin-top: 60px;
+  padding: 10px 100px;
+  padding-bottom: 100px;
+  @include tab{
+    padding: 20px;
+    overflow: hidden;
+  }
+  @include mobile{
+    padding: 15px;
+    overflow: hidden;
+  }
+  .picture {
+    .coverPicture {
+      position: relative;
+      width: 100%;
+      height: 320px;
+      @include tab{
+        height: 250px;
+      }
+      @include mobile{
+        height: 220px;
+      }
+      &:hover {
+        .cImg {
+          opacity: 0.8;
+        }
+        .editCover {
+          position: absolute;
+          left: 10px;
+          top: 10px;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          border: 1px solid white;
+          padding: 8px;
+          border-radius: 3px;
+          font-family: "Roboto", sans-serif;
+          font-weight: 500;
+          font-size: 14px;
+          text-transform: capitalize;
+          cursor: pointer;
+          .camera {
+            color: white;
+          }
+          .editTxt {
+            display: flex;
+          }
+        }
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.5s ease;
+      }
+
+      .editCover {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        padding: 8px;
+        .camera {
+          color: white;
+        }
+      }
+      .editTxt {
+        display: none;
+      }
+
+      .profilePicture {
+        position: absolute;
+        height: 120px;
+        visibility: 120px;
+        left: 45%;
+        bottom: -50px;
+        @include tab{
+          height: 100px;
+          width: 100px;
+          left: 40%;
+          bottom: -20px;
+        }
+        @include mobile{
+          height: 80px;
+          width: 80px;
+          left: 40%;
+          bottom: -15px;
+        }
+        img {
+          height: 100%;
+          width: 100%;
+          border-radius: 50%;
+        }
+      }
+      .pictureLabel {
+        position: absolute;
+        left: 53%;
+        bottom: -40px;
+        z-index: 2;
+        height: 30px;
+        width: 30px;
+        background-color: $button;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        span {
+          color: white;
+        }
+        @include l{
+          left: 58%;
+        }
+        @include tab{
+          left: 51%;
+          bottom: -15px;
+        }
+        @include mobile{
+          bottom: -15px;
+          left: 55%;
+          height: 25px;
+          width: 25px;
+        }
+      }
+    }
+
+    .timeline {
+      @include tab{
+        margin-top: 22px;
+      }
+      @include mobile{
+        margin-top: 20px;
+      }
+      .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .left,
+        .right {
+          margin-top: 15px;
+          .link {
+            border: 1px solid lightgray;
+            padding: 8px 25px;
+            border-radius: 8px;
+            margin: 2px;
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            font-size: 15px;
+            background-color: rgb(252, 252, 252) !important;
+            @include mobile{
+              padding: 8px 12px
+            }
+          }
+        }
+      }
+
+      .down {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 15px;
+        .left,
+        .mid {
+          text-transform: uppercase;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          h1 {
+            font-family: "Roboto", sans-serif;
+            font-size: 25px;
+            font-weight: 800;
+            @include tab{
+              font-size: 20px;
+            }
+            @include mobile{
+              font-size: 16px;
+              font-weight: 600;
+            }
+          }
+          p {
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            color: gray;
+            font-size: 14px;
+            margin-top: -10px;
+            @include tab{
+              font-size: 12px;
+            }
+            @include mobile{
+              font-size: 12px;
+            }
+          }
+        }
+        .right {
+          position: relative;
+          .link {
+            border-radius: 8px;
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            font-size: 15px;
+            width: 200px;
+          }
+          span {
+            position: absolute;
+          }
+        }
+      }
+    }
+
+    .search {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: white;
+      border-radius: 10px;
+      height: 55px;
+      padding: 15px;
+      border: 1px solid lightgray;
+      .left {
+        background-color: $miniBackground;
+        padding: 8px;
+        width: 120px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+      .right {
+        position: relative;
+        input {
+          border: 1px solid lightgray;
+          border-radius: 20px;
+          padding: 5px 10px;
+          padding-left: 30px;
+          width: 250px;
+          font-family: "Roboto", sans-serif;
+          font-size: 14px;
+          font-weight: 400;
+          color: gray;
+          &:focus {
+            outline: none;
+          }
+          &::placeholder {
+            color: lightgray;
+          }
+          @include mobile{
+            width: 180px;
+          }
+        }
+        i {
+          position: absolute;
+          top: 15px;
+          left: 10px;
+          color: lightgray;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import "../../global.scss";
+
+.home {
+  padding: 20px 60px;
+  @include l{
+    padding: 20px;
+  }
+  @include mobile{
+    padding: 15px;
+  }
+  .wrapper {
+    display: flex;
+    gap: 20px;
+    @include tab{
+      flex-direction: column-reverse;
+    }
+    .left {
+      flex: 1;
+    }
+    .center {
+      flex: 2.5;
+    }
+    .right {
+      flex: 1;
+    }
+  }
+}

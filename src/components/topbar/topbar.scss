@@ -1,0 +1,143 @@
+@import "../../global.scss";
+
+.topbar {
+  background-color: $text;
+  display: flex;
+  height: 60px;
+  padding: 0 30px;
+  position: fixed;
+  width: 100%;
+  box-shadow: 8px 8px 62px -29px rgba(0, 0, 0, 0.75);
+  // -webkit-box-shadow: 8px 8px 62px -23px rgba(0, 0, 0, 0.75);
+  // -moz-box-shadow: 8px 8px 62px -23px rgba(0, 0, 0, 0.75);
+  z-index: 999;
+  .left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    .logo {
+      width: 40px;
+      height: 40px;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .icons {
+      width: 45%;
+      margin-left: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      .material-icons {
+        font-size: 15px;
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 1s ease;
+        position: relative;
+        &:hover {
+          background-color: $generalColor;
+          color: white;
+        }
+        &.active {
+          background-color: $generalColor;
+          color: white;
+        }
+        .circle {
+          position: absolute;
+          top: -5px;
+          right: 0;
+          border: 1px solid white;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: $online;
+        }
+        &.right-icons {
+          &:hover {
+            background-color: $button;
+            color: white;
+          }
+        }
+        &.heart {
+          &:hover {
+            background-color: #fc294f;
+          }
+        }
+      }
+    }
+  }
+
+  .right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+
+    .search {
+      position: absolute;
+      left: 47%;
+      top: 43%;
+      color: lightgray;
+      font-size: 14px;
+    }
+    input {
+      border: none;
+      border-radius: 20px;
+      height: 5%;
+      width: 45%;
+      margin-right: 20px;
+      padding: 18px;
+      padding-left: 35px;
+      background-color: $miniBackground;
+      font-family: "Poppins", sans-serif;
+      &:focus {
+        outline: none;
+      }
+      &::placeholder {
+        color: lightgray;
+      }
+    }
+    .img {
+      height: 30px;
+      width: 30px;
+      margin-left: 10px;
+      cursor: pointer;
+      position: relative;
+      img {
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+      }
+      .circle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        border: 1px solid white;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: $online;
+      }
+    }
+    .material-icons {
+      position: relative;
+      .circle {
+        position: absolute;
+        top: -8px;
+        right: -5px;
+        border: 1px solid white;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $button;
+      }
+    }
+  }
+}

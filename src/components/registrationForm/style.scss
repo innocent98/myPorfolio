@@ -1,0 +1,302 @@
+@import "../../global.scss";
+
+.registrationIntro {
+  height: 55vh;
+  width: 40vw;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  padding-bottom: 100px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fly-in 2s ease;
+  .registrationCard {
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h3 {
+      margin-top: 15px;
+      color: $text;
+      font-family: "Montserrat", sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    p {
+      font-family: "Poppins", sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      color: grey;
+      width: 70%;
+    }
+    img {
+      height: 100%;
+    }
+  }
+}
+
+.registrationForm {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fly-in 2s ease;
+  .row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .formCard {
+      height: 60vh;
+      width: 40vw;
+      border-radius: 10px;
+      padding: 20px;
+      padding-top: 15px;
+      background-color: white;
+      animation: fly-in 2s ease;
+      position: relative;
+      .col-md-4 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        background-color: #f3f2f1d5;
+        padding: 18px;
+        border-radius: 8px;
+        margin: 15px 0;
+        input {
+          width: 100%;
+          border: none;
+          background-color: transparent;
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+
+    h3 {
+      color: $text 40%;
+      font-size: 20px;
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      position: absolute;
+      top: -40px;
+    }
+
+    .ppCard {
+      height: 40vh;
+      width: 40vw;
+      border-radius: 10px;
+      padding: 20px;
+      background-color: white;
+      animation: fly-in 2s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      .col-md-4 {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .material-icons {
+          padding: 5px;
+          border: 4px solid white;
+          border-radius: 50%;
+          color: white;
+          background-color: grey;
+          font-size: 15px;
+          position: absolute;
+          top: 20px;
+          right: 36%;
+          cursor: pointer;
+        }
+        .img {
+          height: 150px;
+          width: 150px;
+          border: 1px solid gray;
+          border-radius: 50%;
+          padding: 10px;
+          img {
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+          }
+        }
+        // input {
+        //   width: 100%;
+        //   border: none;
+        //   background-color: transparent;
+        //   &:focus {
+        //     outline: none;
+        //   }
+        // }
+      }
+      p {
+        width: 100%;
+        font-size: 15px;
+        color: grey;
+        margin-top: 10px;
+      }
+    }
+
+    .passwordCard {
+      height: 60vh;
+      width: 40vw;
+      border-radius: 10px;
+      padding: 20px;
+      padding-top: 15px;
+      background-color: white;
+      animation: fly-in 2s ease;
+      position: relative;
+      .col-md-4 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        background-color: #f3f2f1d5;
+        padding: 18px;
+        border-radius: 8px;
+        margin: 15px 0;
+        input {
+          width: 100%;
+          border: none;
+          background-color: transparent;
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+
+    .letInCard {
+      height: 60vh;
+      width: 40vw;
+      border-radius: 10px;
+      padding: 20px;
+      padding-top: 15px;
+      background-color: white;
+      animation: fly-in 2s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .col-md-4 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 18px;
+        border-radius: 8px;
+        margin: 15px 0;
+        img {
+          height: 150px;
+        }
+        h4 {
+          font-size: 15px;
+          color: $text 40%;
+          margin-top: 10px;
+          font-family: "Montserrat", sans-serif;
+          font-weight: 600;
+        }
+        p {
+          font-size: 14px;
+          color: grey;
+          margin-top: 10px;
+          font-family: "Poppins", sans-serif;
+          font-weight: 400;
+          margin-top: -10px;
+        }
+      }
+      .submit-button {
+        background-color: white;
+        width: 300px;
+        height: 40px;
+        border-radius: 8px;
+        border: 1px solid $generalColor;
+        padding: 8px 0;
+        cursor: pointer;
+        transition: all 1s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $generalColor;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        font-size: 15px;
+        margin-top: -25px;
+        &:hover {
+          background-color: $generalColor;
+          color: white;
+        }
+      }
+    }
+
+    .continue-button {
+      display: flex;
+      animation: fly-in 2s ease;
+      .but {
+        background-color: white;
+        width: 100px;
+        height: 40px;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-left: 300px;
+        transition: all 1s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: grey;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        font-size: 15px;
+      }
+
+      .back {
+        &.loading {
+          background-color: $generalColor;
+          border: none;
+        }
+        .spin {
+          animation: spin infinite 1s linear;
+          height: 20px;
+          width: 20px;
+          border-radius: 50%;
+          border: 2px solid white;
+        }
+      }
+      .continue {
+        margin-left: 10px;
+        &:hover {
+          background-color: $generalColor;
+          color: white;
+        }
+        &.isLoading {
+          background-color: $generalColor;
+          border: none;
+        }
+        .spin {
+          animation: spin infinite 1s linear;
+          height: 20px;
+          width: 20px;
+          border-radius: 50%;
+          border: 2px solid white;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fly-in {
+  0% {
+    transform: translateX(150px);
+  }
+}

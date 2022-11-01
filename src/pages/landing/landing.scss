@@ -1,0 +1,94 @@
+@import "../../global.scss";
+
+$skew-amount: 35deg;
+
+.landing {
+  height: 100vh;
+  overflow: hidden;
+  color: white;
+
+  .button {
+    width: 180px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    right: 300px;
+    bottom: 180px;
+    z-index: 999;
+    @include mobile {
+      bottom: 480px;
+      right: 80px;
+    }
+    @include tab {
+      bottom: 480px;
+      right: 80px;
+    }
+    .sign-up {
+      border: 1px solid lightgray;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: all 1s ease;
+      color: white;
+      &:hover {
+        background-color: lightgray;
+        color: $text;
+      }
+    }
+    .sign-in{
+      color: white;
+    }
+  }
+
+  .social {
+    position: absolute;
+    right: 200px;
+    bottom: 250px;
+    z-index: 1;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: 50px;
+    @include tab {
+      bottom: 550px;
+      right: 50px;
+      font-size: 35px;
+    }
+    @include mobile {
+      bottom: 550px;
+      right: 50px;
+      font-size: 30px;
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    height: 100%;
+
+    .left {
+      flex: 1;
+      img {
+        height: 75%;
+        position: absolute;
+        bottom: 10px;
+        left: 50px;
+        z-index: 1;
+      }
+    }
+
+    .right {
+      flex: 4;
+      background-color: $generalColor;
+      transform: translateX(30%) skew($skew-amount);
+      @include tab {
+        transform: translateX(30%) skew(15deg);
+      }
+      @include mobile {
+        transform: translateX(30%) skew(15deg);
+      }
+      .top {
+        display: flex;
+        position: absolute;
+      }
+    }
+  }
+}

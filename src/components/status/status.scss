@@ -1,0 +1,42 @@
+@import "../../global.scss";
+
+.status {
+  .img {
+    width: 300px;
+    cursor: pointer;
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  }
+
+  .details {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 1px solid lightgray;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 90%;
+        height: 90%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+    .likes {
+      font-size: 14px;
+      span {
+        margin: 5px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+      }
+    }
+  }
+}

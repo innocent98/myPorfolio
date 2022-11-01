@@ -1,0 +1,198 @@
+@import "../../global.scss";
+
+.suggestedFriend {
+  background-color: white;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: -4px 11px 46px -33px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -4px 11px 46px -33px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -4px 11px 46px -33px rgba(0, 0, 0, 0.75);
+  position: relative;
+  transition: all 1s ease;
+  @include tab{
+    box-shadow: none;
+    border: 1px solid lightgray;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+  }
+
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 1px solid lightgray;
+    height: 70px;
+    // &:last-child {
+    //   border-bottom: none;
+    // }
+    @include tab{
+      flex-direction: column;
+      height: 180px;
+      width: 150px;
+      gap: 10px;
+    }
+
+    .first {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 16px;
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      color: gray;
+      @include tab{
+        flex-direction: column;
+      }
+      .img {
+        height: 40px;
+        width: 40px;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+      }
+
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        line-height: 0.1;
+        margin-top: 15px;
+        text-align: left;
+        .title {
+          font-size: 15px;
+          font-family: "Roboto", sans-serif;
+          font-weight: 500;
+          @include tab{
+            line-height: 1.1;
+          }
+        }
+        p {
+          color: gray;
+          margin-top: -5px;
+          font-family: "Roboto", sans-serif;
+          font-size: 12px;
+          font-weight: 400;
+        }
+      }
+    }
+
+    .second {
+      .material-icons {
+        font-size: 15px;
+        @include tab{
+          margin-top: -5px;
+        }
+        .check {
+          background-color: $generalColor;
+          border-radius: 50%;
+          height: 22px;
+          width: 22px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          padding: 10px;
+        }
+        .spin {
+          animation: spin infinite 1s linear;
+          height: 18px;
+          width: 18px;
+          border-radius: 50%;
+          border: 1px solid $generalColor;
+        }
+      }
+    }
+  }
+
+  .widget {
+    position: absolute;
+    left: -50px;
+    top: 50px;
+    height: 200px;
+    border-radius: 8px;
+    background-color: white;
+    padding: 10px;
+    z-index: 999;
+    transition: all 1s ease;
+    box-shadow: -4px 11px 46px -33px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -4px 11px 46px -33px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -4px 11px 46px -33px rgba(0, 0, 0, 0.75);
+
+    @include tab{
+      display: none;
+    }
+
+    .coverImage {
+      height: 100px;
+      width: 100%;
+      position: relative;
+      img {
+        height: 100%;
+      }
+      .img {
+        position: absolute;
+        border-radius: 50%;
+        border: 5px solid white;
+        height: 60%;
+        bottom: -30px;
+        right: 10px;
+      }
+    }
+    .title {
+      margin: 5px;
+      font-size: 15px;
+      font-family: "Roboto", sans-serif;
+      font-weight: 500;
+    }
+    p {
+      color: gray;
+      margin-top: -5px;
+      font-family: "Roboto", sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 5px;
+    }
+
+    .spin {
+      height: 25px;
+      width: 25px;
+      border-radius: 50%;
+      border: 3px solid grey;
+      position: absolute;
+      z-index: 9;
+      left: 40%;
+      top: 50%;
+      animation: spin infinite 1s linear;
+      transition: all 1s ease;
+    }
+    &.loading {
+      .coverImage,
+      p,
+      .title {
+        opacity: 0.4;
+      }
+    }
+  }
+}
+
+.none {
+  display: none;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
