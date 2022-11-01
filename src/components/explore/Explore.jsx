@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import "./explore.scss";
 
-const Explore = ({explore, setExplore}) => {
+const Explore = ({setExplore}) => {
   return (
     <div className="explore">
-      <div className="top">Explore</div>
+      {/* <div className="top">Explore</div> */}
       <div className="components">
         <div className="wrapper">
           <Link onClick={()=>setExplore(false)} to="/home" className="page-link">
