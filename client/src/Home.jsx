@@ -5,7 +5,7 @@ import "./style.scss";
 
 function Home() {
   const { user, dispatch } = useContext(AuthContext);
-  const PF = "http://localhost:8300/images/";
+  const PF = "https://tgwapi.herokuapp.com/images/";
   // console.log(PF)
 
   const handleLogout = () => {

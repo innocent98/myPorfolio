@@ -26,11 +26,11 @@ function RegisterScreen({ setRegisterScreen }) {
       inputs.picture = fileName;
       // console.log(inputs);
       try {
-        await axios.post("http://localhost:8300/api/upload", data);
+        await axios.post("https://tgwapi.herokuapp.com/api/upload", data);
       } catch (err) {}
     }
     try {
-      await axios.post("http://localhost:8300/api/auth/register", {
+      await axios.post("https://tgwapi.herokuapp.com/api/auth/register", {
         ...inputs,
       });
       setIsLoading(false);
