@@ -1,0 +1,393 @@
+/* purplr :'#600376'
+green: '#0EB192'
+gold: '#C6B378' */
+
+.app {
+  overflow: hidden;
+}
+
+.topbar {
+  background-color: #600376;
+  width: 100vw;
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
+
+.topLeft {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding-left: 40px;
+}
+
+.logo {
+  height: 70px;
+}
+
+.topRight {
+  flex: 1;
+}
+
+.topRightUl {
+  display: flex;
+  color: white;
+  list-style: none;
+  gap: 60px;
+  font-size: 22px;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+.coach {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.slide {
+  background-color: #600376;
+  display: flex;
+  height: 83vh;
+  gap: 5px;
+  position: relative;
+  padding-top: 20px;
+}
+.slide::-webkit-scrollbar {
+  display: none;
+}
+
+.img {
+  object-fit: cover;
+  width: 200px;
+  height: 100%;
+  transition: all 1s ease;
+}
+
+.overlay {
+  width: 100%;
+  height: 60px;
+  background-color: black;
+  opacity: 0.8;
+  color: #c6b378;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  font-size: 26px;
+}
+
+.journey {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.journeyTitle {
+  font-size: 44px;
+  font-weight: bold;
+}
+
+.journeyBody {
+  font-size: 20px;
+  width: 60%;
+  text-align: center;
+  padding: 15px;
+}
+
+.journeyIncluded {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: lighter;
+  margin-top: 5px;
+}
+
+.gate {
+  width: 150px;
+  margin-left: 60%;
+  padding: 10px;
+}
+
+.book {
+  background-color: #600376;
+  color: white;
+  padding: 15px;
+  border-radius: 4px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.appointment {
+  height: 70vh;
+  background-color: gainsboro;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  animation: fly 1s linear;
+  transition: all 1s ease;
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.425),rgba(230, 182, 49, 0.185)), url("/public/king.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: content-box; */
+}
+@keyframes fly {
+  from {
+    transform: translateY(150px);
+  }
+}
+
+.bookAppointment {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 20px;
+  text-transform: capitalize;
+}
+
+.form {
+  width: 30%;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.appointmentLabel {
+  font-size: 18px;
+}
+
+.appointmentInput {
+  border: 1px solid lightgray;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+.appointmentInput:focus {
+  outline: none;
+}
+
+option {
+  font-size: 16px;
+}
+
+.proceed {
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #600376;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.contact {
+  display: flex;
+}
+
+.contactLeft {
+  flex: 1;
+}
+
+.contactRight {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.contactForm {
+  display: flex;
+  width: 90%;
+  gap: 20px;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.contactTitle {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.contactInput {
+  height: 40px;
+  margin-bottom: 15px;
+  border: 1px solid lightgray;
+  padding: 5px;
+}
+.contactInput,
+.contactText:focus {
+  outline: none;
+}
+
+.contactText {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid lightgray;
+}
+
+.contactButton {
+  height: 40px;
+  border: 1px solid lightgray;
+  cursor: pointer;
+  background-color: #600376;
+  color: white;
+  font-size: 15px;
+}
+
+.footer {
+  background-color: black;
+  opacity: 0.7;
+  text-align: center;
+  height: 40px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.support {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.705), rgba(8, 8, 8, 0.705)),
+    url("/public/support.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: content-box;
+}
+
+.help {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.helpTitle {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.helpJoin {
+  font-size: 20px;
+}
+
+.group {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+}
+.fbgroup {
+  height: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+  .contactLeft {
+    flex: 1;
+  }
+  .contactRight {
+    flex: 1;
+  }
+  .contactPic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .journey {
+    padding: 20px 0;
+  }
+  .journeyBody {
+    width: 100%;
+    padding: 20px;
+  }
+  .journeyIncluded {
+    padding: 20px;
+    padding-left: 30px;
+  }
+  .form {
+    width: 50%;
+  }
+  .contact {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contactTitle {
+    text-align: center;
+  }
+  .contactForm {
+    flex-direction: column-reverse;
+  }
+  .help{padding: 0px 40px;text-align: center;}
+  .helpTitle{font-size: 30px;}
+}
+
+@media only screen and (max-width: 480px) {
+  .topRight {
+    padding-right: 10px;
+  }
+  .topRightUl {
+    font-size: 18px;
+    gap: 20px;
+  }
+  .overlay {
+    text-align: center;
+    font-size: 22px;
+  }
+  .journey {
+    padding: 20px 0;
+  }
+  .journeyBody {
+    width: 100%;
+    padding: 20px;
+  }
+  .journeyIncluded {
+    padding: 20px;
+    padding-left: 30px;
+  }
+  .bookAppointment {
+    text-align: center;
+  }
+  .form {
+    width: 70%;
+  }
+  .contact {
+    flex-direction: column;
+  }
+  .contactTitle {
+    text-align: center;
+  }
+  .contactForm {
+    flex-direction: column-reverse;
+  }
+  .help {
+    padding: 0px 40px;
+    text-align: center;
+  }
+  .helpTitle {
+    font-size: 26px;
+  }
+}
