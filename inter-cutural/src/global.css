@@ -118,9 +118,9 @@ gold: '#C6B378' */
 .book {
   background-color: #600376;
   color: white;
-  padding: 15px;
+  padding: 15px 30px;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 20px;
   border: none;
   cursor: pointer;
   margin: 20px;
@@ -294,12 +294,34 @@ option {
 }
 
 .group {
+  width: 100%;
   display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
-  padding: 20px;
+  padding: 30px;
 }
 .fbgroup {
   height: 30px;
+}
+
+.groupLeft {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  width: 100%;
+  padding: 20px;
+  opacity: 0.8;
+}
+
+.grouplink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  gap: 20px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -341,8 +363,37 @@ option {
   .contactForm {
     flex-direction: column-reverse;
   }
-  .help{padding: 0px 40px;text-align: center;}
-  .helpTitle{font-size: 30px;}
+  .help {
+    padding: 0px 40px;
+    text-align: center;
+  }
+  .helpTitle {
+    font-size: 30px;
+  }
+  .groupRight {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .groupLeft {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5px;
+  }
+  p {
+    font-size: 15px;
+  }
+  .grouplink {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+  }
+  .iframe {
+    height: 200px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -389,5 +440,29 @@ option {
   }
   .helpTitle {
     font-size: 26px;
+  }
+  .groupRight {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .groupLeft {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5px;
+  }
+  p {
+    font-size: 14px;
+  }
+  .grouplink {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+  }
+  .iframe {
+    height: 200px;
   }
 }

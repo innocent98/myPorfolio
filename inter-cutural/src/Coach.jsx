@@ -5,7 +5,7 @@ import Topbar from "./Topbar";
 const slideImg = [
   {
     id: 1,
-    img: "https://noticias.damasio.com.br/wp-content/uploads/2021/08/legenda-marketing-juridico.jpg",
+    img: "https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/themes/1297041/settings_images/bTTV4KAAQGmUa1wzlUCE_girl_smiling_at_computer_black_beautiful.jpeg",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const slideImg = [
   },
   {
     id: 4,
-    img: "https://i4p9z8i7.rocketcdn.me/wp-content/uploads/2020/09/Coaching-la-gi.jpg",
+    img: "https://www.sacap.edu.za/wp-content/uploads/2019/04/tips-for-coaches-1920x1280.jpg'",
   },
   {
     id: 5,
@@ -25,7 +25,7 @@ const slideImg = [
   },
   {
     id: 6,
-    img: "https://mindtoolsbusiness.com/getmedia/6f8ac7c7-6b59-4c31-aa90-499da43e7234/3-things-I-learned-from-coaching-header-400-small?maxsidesize=660&resizemode=force",
+    img: "https://www.goodtherapy.org/blog/blog/wp-content/uploads/2021/07/GettyImages-1210523597-1-800x522.jpg",
   },
   {
     id: 7,
@@ -33,7 +33,7 @@ const slideImg = [
   },
   {
     id: 8,
-    img: "https://blog.unyleya.edu.br/wp-content/uploads/2019/04/285880-coaching-juridico-por-que-se-especializar-nessa-area.jpg",
+    img: "https://assets-global.website-files.com/5e7230c4549930001357ce5e/6352d8e6ae439c0c51501962_Two-Woman-having-a-one-on-one-coaching.jpg",
   },
   {
     id: 9,
@@ -41,7 +41,7 @@ const slideImg = [
   },
   {
     id: 10,
-    img: "https://www.3mind.com.br/blog/wp-content/uploads/2020/08/3-dicas-para-checar-ao-topo-do-google-com-marketing-digital-para-advogados.jpg",
+    img: "https://imageio.forbes.com/specials-images/dam/imageserve/1085354216/960x0.jpg?format=jpg&width=960",
   },
 ];
 
@@ -194,6 +194,12 @@ function Coach() {
               <input
                 type="text"
                 placeholder="Subject *"
+                className="contactInput"
+                required
+              />
+              <input
+                type="text"
+                placeholder="Phone Number *"
                 className="contactInput"
                 required
               />
