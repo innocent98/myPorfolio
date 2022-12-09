@@ -12,41 +12,48 @@ function Support() {
         <div className="group">
           <div className="groupLeft">
             <div className="grouplink">
-              <Link to="https://fb.me/g/p_NEKXN42Y6J95rfaC/nDnddyQw?ref=share">
+              <a href="https://fb.me/g/p_NEKXN42Y6J95rfaC/nDnddyQw?ref=share">
                 <img
                   src="https://apkpure.online/wp-content/uploads/2022/08/FB-f-Logo__blue_512.png"
                   alt=""
                   className="fbgroup"
                 />
-              </Link>
+              </a>
               <p>For Intercultural Couples</p>
             </div>
             <div className="grouplink">
-              <Link to="https://www.facebook.com/groups/634569884234461/?ref=share">
+              <a href="https://www.facebook.com/groups/634569884234461/?ref=share">
                 <img
                   src="https://apkpure.online/wp-content/uploads/2022/08/FB-f-Logo__blue_512.png"
                   alt=""
                   className="fbgroup"
                 />
-              </Link>
+              </a>
               <p>
                 For those who are single and who are interested in dating
                 interculturally
               </p>
             </div>
             <div className="grouplink">
-              <Link to="https://www.facebook.com/groups/thekingspalace1/?ref=share">
+              <a href="https://www.facebook.com/groups/thekingspalace1/?ref=share">
                 <img
                   src="https://apkpure.online/wp-content/uploads/2022/08/FB-f-Logo__blue_512.png"
                   alt=""
                   className="fbgroup"
                 />
-              </Link>
-              <p>Support Group for men only. <br /> NB: Monthly membership fee.</p>
+              </a>
+              <p>
+                Support Group for men only. <br /> NB: Monthly membership fee.
+              </p>
             </div>
           </div>
           <div className="groupRight">
-            <iframe src="/help.mp4" height="300px" width="500px" className="iframe" />
+            <iframe
+              src="/help.mp4"
+              height="300px"
+              width="500px"
+              className="iframe"
+            />
           </div>
         </div>
       </div>

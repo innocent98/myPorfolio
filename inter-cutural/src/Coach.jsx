@@ -5,15 +5,15 @@ import Topbar from "./Topbar";
 const slideImg = [
   {
     id: 1,
-    img: "https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/themes/1297041/settings_images/bTTV4KAAQGmUa1wzlUCE_girl_smiling_at_computer_black_beautiful.jpeg",
+    img: "https://endsexualviolencect.org/wp-content/uploads/2019/12/Coaches-Clinic-2.jpeg",
   },
   {
     id: 2,
-    img: "https://nova-live.imgix.net//What%20is%20Coaching-0c6b0d91-054a-46e8-af5f-0f723e1a67b6.png?fit=crop&w=1200&h=627",
+    img: "https://static.wixstatic.com/media/11062b_66a570629f7f4b2dbdc7b245858f02bf~mv2.jpg/v1/fill/w_640,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/11062b_66a570629f7f4b2dbdc7b245858f02bf~mv2.jpg",
   },
   {
     id: 3,
-    img: "https://www.developpement-personnel.com/wp-content/uploads/2021/04/questions-coaching.png",
+    img: "https://www.futuretalentlearning.com/hubfs/lifelong-learning.jpg",
   },
   {
     id: 4,
@@ -21,23 +21,23 @@ const slideImg = [
   },
   {
     id: 5,
-    img: "https://cdn.shrm.org/image/upload/c_crop%2Ch_635%2Cw_1129%2Cx_125%2Cy_72/c_fit%2Cf_auto%2Cq_auto%2Cw_767/v1/Organizational%20and%20Employee%20Development/iStock-1212754217_b0fygf?databtoa=eyIxNng5Ijp7IngiOjEyNSwieSI6NzIsIngyIjoxMjU0LCJ5MiI6NzA3LCJ3IjoxMTI5LCJoIjo2MzV9fQ%3D%3D",
+    img: "https://www.matrrix.in/images/certifications.webp",
   },
   {
     id: 6,
-    img: "https://www.goodtherapy.org/blog/blog/wp-content/uploads/2021/07/GettyImages-1210523597-1-800x522.jpg",
+    img: "https://trainingindustry.com/content/uploads/2018/01/1.23.18-Mentoring.jpg",
   },
   {
     id: 7,
-    img: "https://blog.unyleya.edu.br/wp-content/uploads/2020/06/GettyImages-1128228794-1-1.jpg",
+    img: "https://www.mtdtraining.com/wp-content/webp-express/webp-images/uploads/2022/08/black-man-office-interview-300x300.jpg.webp",
   },
   {
     id: 8,
-    img: "https://assets-global.website-files.com/5e7230c4549930001357ce5e/6352d8e6ae439c0c51501962_Two-Woman-having-a-one-on-one-coaching.jpg",
+    img: "https://www.life-coaching-services.net/img/f065f5aa302c6c8059e94610c14c19d6.jpg?15",
   },
   {
     id: 9,
-    img: "https://juridicamente.info/wp-content/uploads/2021/10/Advocacia-mesmo-diante-da-Crise.jpg",
+    img: "https://images.squarespace-cdn.com/content/v1/5951cc071b10e3977f15d46a/1640286069536-WXR2TOU68622IIFLA31C/customer-success-skills-coaching-and-mentoring.jpg",
   },
   {
     id: 10,
