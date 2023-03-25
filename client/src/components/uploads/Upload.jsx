@@ -26,7 +26,8 @@ export default function Upload() {
   const [progress, setProgress] = useState(0);
   console.log(progress);
 
-  const [inputs, setInputs] = useState({ isAdmin: user[0].isAdmin });
+  // const [inputs, setInputs] = useState({ isAdmin: user[0].isAdmin });
+  const [inputs, setInputs] = useState({});
 
   const handleChange = (e) => {
     setInputs((prev) => {
@@ -122,7 +123,7 @@ export default function Upload() {
       <div className="logout">
         <Logout />
       </div>
-      <p>{user[0].email}</p>
+      <p>{user.email}</p>
       <form className="row g-3" onSubmit={handleSubmit}>
         <div className="col-md-4">
           <label htmlFor="title" className="form-label">

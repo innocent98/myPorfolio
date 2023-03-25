@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-// const mongoose = require("mongoose");
+const mongoose = require("mongoose");
 const morgan = require("morgan");
 const helmet = require("helmet");
 const cors = require("cors");
@@ -9,9 +9,17 @@ const router = require("./routes/index");
 // const multer = require("multer");
 // const firebase = require("./firebase");
 const path = require("path");
-const db = require("./config/database");
+// const db = require("./config/database");
 
 dotenv.config();
+
+mongoose
+  .connect(process.env.MONGO_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("Database connected"))
+  .catch((err) => console.log(err));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

@@ -30,7 +30,7 @@ export default function Intro({isScrolled}) {
             I Build <span ref={textRef}></span>
           </h3>
           <a
-            href="https://drive.google.com/file/d/15GogSCFD2mK6IVOoWidjU5J2R4_ZUG90/view?usp=drivesdk"
+            href="https://docs.google.com/document/d/e/2PACX-1vQ2DockGe2hiuZWdqsIZbZ5XHO4i_fG01v3TQPYlSdNQlUlQSYDXGSd5h8d4iJ3Dq2KijJE6cQNTvGh/pub"
             target="_blank"
             className="cv"
             rel="noreferrer"
